@@ -1,0 +1,141 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+@keyframes moveLogoUpDown {
+    0% {
+        transform: translateX(30px); /* Start at original position */
+    }
+    100% {
+        transform: translateX(0); /* Move 300 pixels to the right */
+    }
+}
+.logo {
+    display: block;
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio */
+    margin: 0 auto; /* Centers the logo */
+    position:static; /* Ensures the logo stays in place when you scroll */
+    top: 20px; /* Adjust if you need the logo higher or lower */
+    right: 80%;
+    transform: translateX(-50%);
+    border: 3px solid black; /* Adds a black border around the logo */
+    z-index: 1000; /* Ensures the logo stays above all other content */
+    box-shadow: 0 0 10px #ccc;
+    animation: moveLogoUpDown 5s infinite alternate;
+
+}
+/* Global reset for the chat box */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-shadow: 0 0 10px #ccc;
+  }
+  
+  /* Shared styles for all messages */
+  .message {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%; /* Adjust this to control maximum message width */
+    word-wrap: break-word; /* Ensures the text breaks to prevent overflow */
+  }
+  
+  /* User messages */
+  .message-right {
+    background-color: #0084ff;
+    color: white;
+    align-self: flex-end; /* Aligns user messages to the right */
+    margin-left: auto; /* Ensures the message aligns to the right edge */
+    
+  }
+  
+  /* Chatbot messages */
+  .message-left {
+    background-color: #e0e0e0;
+    align-self: flex-start; /* Aligns chatbot messages to the left */
+  }
+  
+/* Header styles */
+header {
+    background-color: #0057b7;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Chat container styles */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+/* Chat box styling */
+.chat-box {
+    padding: 20px;
+    background-color: #fff;
+    height: 300px;
+    overflow-y: auto;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    padding: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3d5bdf;
+    color: rgb(14, 13, 13);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Toggle theme button */
+#theme-toggle {
+    background-color: #0868b6;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    float: right;
+}
+#theme-toggle:hover {
+    background-color: #2335d3;
+    border: 1px solid black;
+}
+.dark-theme {
+    background-color: #333;
+    color: #000000;
+    
+}
+
+.dark-theme header {
+    background-color: #222;
+}
+
+.dark-theme .chat-box {
+    background-color: #444;
+}
+
